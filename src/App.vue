@@ -1,19 +1,18 @@
 <template>
-  <div>
-    <span :title="message"> Hover your mouse over me for a few seconds to see my dynamically-bound
+  <div id="app">
+   <!-- <span :title="message">Hover your mouse over me for a few seconds to see my dynamically-bound
     title!
-    
      </span>
 
      <br>
 
-     <a :[attrName]="url"> Link </a><br>
+     <a :href="url"> Link </a><br>
      <input v-on:focus="doSomething" />
-     <button @click='doSomething'>Button</button>
+     <button @click='doSomething'>Button</button>-->
+      <!--<Question></Question>
+      <my-comp class="myclass" />-->
+      <Todo />
 
-
-
-    <!-- <p> {{ message.split('').reverse().join('') }}</p> -->
 
   </div>
   <!-- <img alt="Vue logo" src="./assets/logo.png">
@@ -21,14 +20,23 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
+    /*import Question from "./components/Question";
+    import myComp from "./components/myComp";
+    import ArrayFilter from "./components/ArrayFilter";
+    import HelloWorld from './components/HelloWorld.vue'*/
+    import Todo from "./components/Todo";
 export default {
+    components:{
+        /*Question,
+        myComp,
+        ArrayFilter*/
+        Todo
+    },
   data() {
     return {
       message: "You loaded this page on" + new Date().toLocaleString(),
       count: 12,
       url: 'https://baidu.com',
-      attrName: 'href'
     };
   },
 
@@ -54,4 +62,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+    .myclass{
+        color: red;
+    }
 </style>
