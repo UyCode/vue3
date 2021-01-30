@@ -11,7 +11,8 @@
      <button @click='doSomething'>Button</button>-->
       <!--<Question></Question>
       <my-comp class="myclass" />-->
-      <Todo />
+      <!--<Todo />-->
+      <VonEvent></VonEvent>
 
 
   </div>
@@ -24,13 +25,14 @@
     import myComp from "./components/myComp";
     import ArrayFilter from "./components/ArrayFilter";
     import HelloWorld from './components/HelloWorld.vue'*/
-    import Todo from "./components/Todo";
+    /*import Todo from "./components/Todo";*/
+    import VonEvent from './components/VonEvent'
 export default {
     components:{
         /*Question,
         myComp,
         ArrayFilter*/
-        Todo
+        VonEvent
     },
   data() {
     return {
