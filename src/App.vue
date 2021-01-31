@@ -12,7 +12,8 @@
       <!--<Question></Question>
       <my-comp class="myclass" />-->
       <!--<Todo />-->
-      <VonEvent></VonEvent>
+      <!--<VonEvent></VonEvent>-->
+      <FormInput> </FormInput>
 
 
   </div>
@@ -24,15 +25,18 @@
     /*import Question from "./components/Question";
     import myComp from "./components/myComp";
     import ArrayFilter from "./components/ArrayFilter";
-    import HelloWorld from './components/HelloWorld.vue'*/
-    /*import Todo from "./components/Todo";*/
-    import VonEvent from './components/VonEvent'
+    import HelloWorld from './components/HelloWorld.vue'
+    import Todo from "./components/Todo";
+    import VonEvent from './components/VonEvent'*/
+    import FormInput from './components/FormInput';
+
 export default {
     components:{
         /*Question,
         myComp,
-        ArrayFilter*/
-        VonEvent
+        ArrayFilter
+        VonEvent*/
+        FormInput
     },
   data() {
     return {
