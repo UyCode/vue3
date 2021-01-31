@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-   <!-- <span :title="message">Hover your mouse over me for a few seconds to see my dynamically-bound
+   <!-- <span :title="message">
+   Hover your mouse over me for a few seconds to see my dynamically-bound
     title!
      </span>
 
@@ -8,12 +9,14 @@
 
      <a :href="url"> Link </a><br>
      <input v-on:focus="doSomething" />
-     <button @click='doSomething'>Button</button>-->
-      <!--<Question></Question>
-      <my-comp class="myclass" />-->
-      <!--<Todo />-->
-      <!--<VonEvent></VonEvent>-->
-      <FormInput> </FormInput>
+     <button @click='doSomething'>Button</button>
+      <Question></Question>
+      <my-comp class="myclass" />
+      <Todo />
+      <VonEvent></VonEvent>
+      <FormInput> </FormInput>-->
+
+      <component-basics></component-basics>
 
 
   </div>
@@ -27,16 +30,18 @@
     import ArrayFilter from "./components/ArrayFilter";
     import HelloWorld from './components/HelloWorld.vue'
     import Todo from "./components/Todo";
-    import VonEvent from './components/VonEvent'*/
-    import FormInput from './components/FormInput';
+    import VonEvent from './components/VonEvent'
+    import FormInput from './components/FormInput';*/
+    import ComponentBasics from "./components/ComponentBasics";
 
 export default {
     components:{
         /*Question,
         myComp,
         ArrayFilter
-        VonEvent*/
-        FormInput
+        VonEvent
+        FormInput*/
+        ComponentBasics
     },
   data() {
     return {
@@ -47,7 +52,7 @@ export default {
   },
 
   created() {
-    console.log(this.count);
+    console.log(this.message);
 
   },
 
