@@ -16,8 +16,9 @@
       <VonEvent></VonEvent>
       <FormInput> </FormInput>
 
-      <component-basics></component-basics>-->
-      <alert-box>this is an internal error</alert-box>
+      <component-basics></component-basics>
+      <alert-box>this is an internal error</alert-box> -->
+      <dynamic-component></dynamic-component>
 
 
   </div>
@@ -34,9 +35,9 @@
     import Todo from "./components/Todo";
     import VonEvent from './components/VonEvent'
     import FormInput from './components/FormInput';
-    import ComponentBasics from "./components/ComponentBasics";*/
-    import AlertBox from './components/AlertBox';
-
+    import ComponentBasics from "./components/ComponentBasics";
+    import AlertBox from './components/AlertBox';*/
+    import DynamicComponent from "./components/DynamicComponent";
 export default {
     components:{
         /*Question,
@@ -44,8 +45,9 @@ export default {
         ArrayFilter
         VonEvent
         FormInput
-        ComponentBasics*/
-        AlertBox
+        ComponentBasics
+        AlertBox*/
+        DynamicComponent
     },
   data() {
     return {
