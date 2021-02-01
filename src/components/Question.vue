@@ -34,8 +34,8 @@
 					.then(response => {
 						this.answer = response.data.answer
 					}).catch(error => {
-						return ElMessage.error('连接错误!');
-					//this.answer = 'Error! could not reach the API ' + error
+						//return ElMessage.error('连接错误!');
+					this.answer = 'Error! could not reach the API ' + error
 				})
 			}
 		},

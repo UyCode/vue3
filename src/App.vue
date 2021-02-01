@@ -14,14 +14,16 @@
       <my-comp class="myclass" />
       <Todo />
       <VonEvent></VonEvent>
-      <FormInput> </FormInput>-->
+      <FormInput> </FormInput>
 
-      <component-basics></component-basics>
+      <component-basics></component-basics>-->
+      <alert-box>this is an internal error</alert-box>
 
 
   </div>
-  <!-- <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <!--
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 </template>
 
 <script>
@@ -31,8 +33,9 @@
     import HelloWorld from './components/HelloWorld.vue'
     import Todo from "./components/Todo";
     import VonEvent from './components/VonEvent'
-    import FormInput from './components/FormInput';*/
-    import ComponentBasics from "./components/ComponentBasics";
+    import FormInput from './components/FormInput';
+    import ComponentBasics from "./components/ComponentBasics";*/
+    import AlertBox from './components/AlertBox';
 
 export default {
     components:{
@@ -40,8 +43,9 @@ export default {
         myComp,
         ArrayFilter
         VonEvent
-        FormInput*/
-        ComponentBasics
+        FormInput
+        ComponentBasics*/
+        AlertBox
     },
   data() {
     return {
