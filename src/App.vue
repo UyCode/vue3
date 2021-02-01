@@ -17,9 +17,9 @@
       <FormInput> </FormInput>
 
       <component-basics></component-basics>
-      <alert-box>this is an internal error</alert-box> -->
-      <dynamic-component></dynamic-component>
-
+      <alert-box>this is an internal error</alert-box>
+      <dynamic-component></dynamic-component>-->
+      <data-picker></data-picker>
 
   </div>
   <!--
@@ -36,18 +36,20 @@
     import VonEvent from './components/VonEvent'
     import FormInput from './components/FormInput';
     import ComponentBasics from "./components/ComponentBasics";
-    import AlertBox from './components/AlertBox';*/
-    import DynamicComponent from "./components/DynamicComponent";
+    import AlertBox from './components/AlertBox';
+    import DynamicComponent from "./components/DynamicComponent";*/
+    import DataPicker from "./components/DataPicker";
 export default {
     components:{
+        DataPicker,
         /*Question,
         myComp,
         ArrayFilter
         VonEvent
         FormInput
         ComponentBasics
-        AlertBox*/
-        DynamicComponent
+        AlertBox
+        DynamicComponent*/
     },
   data() {
     return {
