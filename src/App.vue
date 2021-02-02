@@ -1,14 +1,14 @@
 <template>
 	<div id="app">
-		<list-transition></list-transition>
+		<my-book></my-book>
 	</div>
 </template>
 
 <script>
-	import ListTransition from "./components/transitionsandanimation/ListTransition";
+	import MyBook from "./components/CompositionAPI/MyBook";
 	export default {
 		components: {
-			ListTransition
+			MyBook
 		},
 		data() {
 			return {
