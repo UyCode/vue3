@@ -1,14 +1,14 @@
 <template>
 	<div id="app">
-		<enter-transition></enter-transition>
+		<list-transition></list-transition>
 	</div>
 </template>
 
 <script>
-	import EnterTransition from "./components/transitionsandanimation/EnterTransition";
+	import ListTransition from "./components/transitionsandanimation/ListTransition";
 	export default {
 		components: {
-			EnterTransition,
+			ListTransition
 		},
 		data() {
 			return {
