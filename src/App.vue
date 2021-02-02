@@ -1,14 +1,14 @@
 <template>
 	<div id="app">
-		<my-book></my-book>
+		<my-map />
 	</div>
 </template>
 
 <script>
-	import MyBook from "./components/CompositionAPI/MyBook";
+	import MyMap from "./components/CompositionAPI/MyMap";
 	export default {
 		components: {
-			MyBook
+			MyMap
 		},
 		data() {
 			return {

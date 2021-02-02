@@ -5,7 +5,7 @@
 </template>
 
 <script>
-	import {toRef, ref, reactive} from 'vue'
+	import {toRef, ref, reactive, onMounted, onBeforeMount} from 'vue'
 	export default {
 		name: "MyBook",
 		props:{
@@ -14,7 +14,16 @@
 		setup(props, context){
 			const readersNumber = ref(0);
 
-			const book = reactive({title: 'Vue3 Guide'})
+			const book = reactive({title: 'Vue3 Guide'});
+
+			onBeforeMount(() =>{
+				console.log("Before Mount!");
+			});
+
+			onMounted(() =>{
+				console.log("Mounted!");
+			});
+
 
 			// utilize by ES6 destructuring
 			const title = toRef(props, 'title')
