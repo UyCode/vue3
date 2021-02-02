@@ -1,16 +1,15 @@
 <template>
 	<div id="app">
-		<modifiers v-model.capitalize="myText">{{myText}}</modifiers>
-
+		<dynamic-component></dynamic-component>
 	</div>
 </template>
 
 <script>
-	import Modifiers from "./components/Modifiers";
+	import DynamicComponent from "./components/DynamicComponent";
 
 	export default {
 		components: {
-			Modifiers
+			DynamicComponent
 		},
 		data() {
 			return {

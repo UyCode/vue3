@@ -1,6 +1,6 @@
 <template>
     <div class="demo-tab">
-        Archive Component
+        <h2>Archive Component</h2>
     </div>
 </template>
 

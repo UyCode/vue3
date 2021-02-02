@@ -7,8 +7,10 @@
                 @click="currentTab = tab"
         > {{ tab }}
         </button>
-
+    <keep-alive>
         <component :is="currentTabComponent"></component>
+    </keep-alive>
+
     </div>
 </template>
 
