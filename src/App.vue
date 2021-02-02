@@ -1,15 +1,14 @@
 <template>
 	<div id="app">
-		<dynamic-component></dynamic-component>
+		<shake-button></shake-button>
 	</div>
 </template>
 
 <script>
-	import DynamicComponent from "./components/DynamicComponent";
-
+	import ShakeButton from "./components/ShakeButton";
 	export default {
 		components: {
-			DynamicComponent
+			ShakeButton,
 		},
 		data() {
 			return {
