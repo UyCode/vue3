@@ -1,14 +1,14 @@
 <template>
 	<div id="app">
-		<shake-button></shake-button>
+		<enter-transition></enter-transition>
 	</div>
 </template>
 
 <script>
-	import ShakeButton from "./components/ShakeButton";
+	import EnterTransition from "./components/transitionsandanimation/EnterTransition";
 	export default {
 		components: {
-			ShakeButton,
+			EnterTransition,
 		},
 		data() {
 			return {
