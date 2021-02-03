@@ -1,14 +1,14 @@
 <template>
 	<div id="app">
-		<my-map />
+		<template-refs-second />
 	</div>
 </template>
 
 <script>
-	import MyMap from "./components/CompositionAPI/MyMap";
+	import TemplateRefsSecond from "./components/CompositionAPI/TemplateRefsSecond";
 	export default {
 		components: {
-			MyMap
+			TemplateRefsSecond,
 		},
 		data() {
 			return {
