@@ -1,14 +1,14 @@
 <template>
 	<div id="app">
-		<template-refs-second />
+		<watching-template-refs />
 	</div>
 </template>
 
 <script>
-	import TemplateRefsSecond from "./components/CompositionAPI/TemplateRefsSecond";
+	import WatchingTemplateRefs from "./components/CompositionAPI/WatchingTemplateRefs";
 	export default {
 		components: {
-			TemplateRefsSecond,
+			WatchingTemplateRefs,
 		},
 		data() {
 			return {
