@@ -1,16 +1,17 @@
 import {createApp} from 'vue'
-import VueAxios from 'vue-axios'
-import router from './router/index';
-//import * as Router from 'vue-router'
-//import ElementPlus from 'element-plus';
+import store from './store'
+import router from './router';
 import * as ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 import App from './App.vue'
-import axios from "axios";
+import './plugins/axios'
 
-const app = createApp(App)
+createApp(App).use(store).use(router).use(ElementPlus).mount("#app");
+
+
+/*const app = createApp(App)
 app.use(ElementPlus, VueAxios, axios, router)
-app.mount('#app')
+app.mount('#app')*/
 
 //createApp(App).use(Axios).mount('#app')
 /* 

@@ -1,17 +1,18 @@
 <template>
-	<h1> Hello App</h1>
-		<p>
-			<router-link to="/">HomePage</router-link> <br />
-			<router-link to="/about">AboutPage</router-link>
-		</p>
-		<router-view></router-view>
+	<div id="nav">
+		<h1> Hello App</h1>
+		<router-link to="/">HomePage</router-link>
+		|
+		<router-link to="/about">AboutPage</router-link>
+
 		<!--<router-example />-->
+	</div>
+	<router-view/>
 </template>
 
 <script>
 	export default {
-		components: {
-		},
+		components: {},
 		data() {
 			return {
 				message: "You loaded this page on" + new Date().toLocaleString(),
@@ -56,4 +57,18 @@
 	.myclass {
 		color: red;
 	}
+
+	#nav {
+		padding: 30px;
+	}
+
+	#nav a {
+		font-weight: bold;
+		color: #2c3e50;
+	}
+
+	#nav a.router-link-exact-active {
+		color: #42b983;
+	}
+
 </style>
