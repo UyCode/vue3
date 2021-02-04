@@ -1,14 +1,16 @@
 <template>
-	<div id="app">
-		<watching-template-refs />
-	</div>
+	<h1> Hello App</h1>
+		<p>
+			<router-link to="/">HomePage</router-link> <br />
+			<router-link to="/about">AboutPage</router-link>
+		</p>
+		<router-view></router-view>
+		<!--<router-example />-->
 </template>
 
 <script>
-	import WatchingTemplateRefs from "./components/CompositionAPI/WatchingTemplateRefs";
 	export default {
 		components: {
-			WatchingTemplateRefs,
 		},
 		data() {
 			return {
@@ -26,7 +28,7 @@
 
 		methods: {
 			doSomething() {
-				alert("fucused")
+				alert("focused")
 			},
 			starter() {
 				console.log('🟢 Start Sending')
