@@ -5,7 +5,6 @@ import * as ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 import App from './App.vue'
 import './plugins/axios'
-import './assets/style.css'
 
 createApp(App)
     .use(store)

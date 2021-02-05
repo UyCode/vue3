@@ -45,14 +45,6 @@
 </script>
 
 <style>
-	#app {
-		font-family: Avenir, Helvetica, Arial, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		padding-left: 40%;
-		color: #2c3e50;
-		margin-top: 60px;
-	}
 
 	.myclass {
 		color: red;
