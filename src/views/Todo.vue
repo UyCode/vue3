@@ -111,16 +111,16 @@
 				this.todos.splice(index, 1);
 
 			},
-            handleEdit(row) {
-                let index = this.todos.findIndex(item => item.id === row.id)
-                console.log(index)
+            handleEdit(index) {
                 this.currentTodo = this.todos[index];
-                console.log(this.currentTodo)
                 this.show = true;
+                return index;
             },
             editTodo(){
                 this.currentTodo.title = this.edit;
-
+                this.todos[this.index] = this.currentTodo;
+                ElMessage.success('修改成功！');
+                this.show = false;
             }
 		}
 	}
