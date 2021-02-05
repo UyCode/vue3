@@ -8,7 +8,7 @@
                        type="primary">Add
             </el-button>
                 <el-table :data="todos"
-                          style="width: 100%">
+                         style="width: 640px;">
                     <el-table-column
                             label="To-Do List"
                             prop="title"
@@ -18,11 +18,11 @@
                     </el-table-column>
                     <el-table-column label="操作">
                         <template #default="scope">
-                            <el-button
+                            <el-button type="primary" icon="el-icon-edit"
                                     size="mini"
                                     @click="handleEdit(scope.$index, scope.row)">编辑
                             </el-button>
-                            <el-button
+                            <el-button icon="el-icon-delete"
                                     size="mini"
                                     type="danger"
                                     @click="handleDelete(scope.row)">删除

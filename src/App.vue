@@ -1,8 +1,8 @@
 <template>
 	<div id="nav">
 		<h1> Hello App</h1>
-		<router-link to="/">HomePage</router-link>
-		|
+		<router-link to="/">HomePage</router-link> |
+		<router-link to="/calendar">Calendar</router-link> |
 		<router-link to="/about">Todo</router-link>
 
 		<!--<router-example />-->
@@ -49,7 +49,7 @@
 		font-family: Avenir, Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
+		padding-left: 40%;
 		color: #2c3e50;
 		margin-top: 60px;
 	}
