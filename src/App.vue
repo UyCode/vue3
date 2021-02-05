@@ -3,7 +3,7 @@
 		<h1> Hello App</h1>
 		<router-link to="/">HomePage</router-link>
 		|
-		<router-link to="/about">AboutPage</router-link>
+		<router-link to="/about">Todo</router-link>
 
 		<!--<router-example />-->
 	</div>

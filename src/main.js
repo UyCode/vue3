@@ -6,7 +6,11 @@ import 'element-plus/lib/theme-chalk/index.css';
 import App from './App.vue'
 import './plugins/axios'
 
-createApp(App).use(store).use(router).use(ElementPlus).mount("#app");
+createApp(App)
+    .use(store)
+    .use(router)
+    .use(ElementPlus)
+    .mount("#app");
 
 
 /*const app = createApp(App)
