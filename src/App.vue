@@ -23,7 +23,8 @@
 					{name: 'Home', to: '/'},
 					{name: 'Todo', to: '/todo'},
 					{name: 'Calendar', to: '/calendar'},
-					{name: 'Markdown', to: '/markdown'}
+					{name: 'Markdown', to: '/markdown'},
+					{name: 'Slider', to: '/slider'},
 				]
 			}
 		}

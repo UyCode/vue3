@@ -61,12 +61,10 @@
 			});*/
 		},
 		unmounted() {
-			setTimeout(() =>{
-				this.$message({
-					message: '你刚刚失去了一切...',
-					type: 'warning'
-				});
-			}, 1000);
+			this.debounce(() => this.$message({
+				message: '你刚刚失去了一切...',
+				type: 'warning'
+			}), 500);
 		}
 
 	}
