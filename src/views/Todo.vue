@@ -1,14 +1,20 @@
 <template>
-        <el-container>
-            <el-input style="width: 20%;" v-model="newTodoText"
-                      placeholder="E.g. feet the cat"
-            ></el-input>
+    <div class="textAlign">
+            <div>
+                <el-input  v-model="newTodoText"
+                          placeholder="E.g. feet the cat"
+                           maxlength="30"
+                           style="width: 300px;"
+                           show-word-limit
+                ></el-input>
 
-            <el-button style="width: 5%; height: 3%" :plain="true" @click="addNewTodo"
-                       type="primary">Add
-            </el-button>
+                <el-button  :plain="true" @click="addNewTodo"
+                           type="primary">Add
+                </el-button>
+            </div>
+            <div>
                 <el-table :data="todos"
-                         style="width: 640px;">
+                          style="width: 640px;">
                     <el-table-column
                             label="To-Do List"
                             prop="title"
@@ -19,17 +25,18 @@
                     <el-table-column label="操作">
                         <template #default="scope">
                             <el-button type="primary" icon="el-icon-edit"
-                                    size="mini"
-                                    @click="handleEdit(scope.$index, scope.row)">编辑
+                                       size="mini"
+                                       @click="handleEdit(scope.$index, scope.row)">编辑
                             </el-button>
                             <el-button icon="el-icon-delete"
-                                    size="mini"
-                                    type="danger"
-                                    @click="handleDelete(scope.row)">删除
+                                       size="mini"
+                                       type="danger"
+                                       @click="handleDelete(scope.row)">删除
                             </el-button>
                         </template>
                     </el-table-column>
                 </el-table>
+            </div>
 
             <el-dialog title="修改To-Do" v-model="show">
                 <el-form @submit="edit">
@@ -39,7 +46,6 @@
                     <el-button @click="editTodo">确定</el-button>
                 </el-form>
             </el-dialog>
-        </el-container>
 
         <!--<ul>
             <todo-item
@@ -49,6 +55,8 @@
                     @remove="todos.splice(index, 1)"
             ></todo-item>
          </ul>-->
+
+    </div>
 </template>
 
 <script>
@@ -79,16 +87,7 @@
 					},
 				],
 				nextTodoId: 4,
-                cannot(){
-					ElMessage({
-						message: 'todo Item can\'t Empty',
-                        showClose:true,
-                        type: 'error'
-					});
-                },
-
                 currentTodo:{}
-
 			}
 		},
 
@@ -101,14 +100,26 @@
 						title: this.newTodoText
 					});
 					this.newTodoText = '';
-				} else {
-					return this.cannot();
+                    ElMessage.success({
+                        message:'添加成功!',
+                        showClose: true
+                    })
+
+                } else {
+                    ElMessage.error({
+                        message:'无法添加空数据!',
+                        showClose: true
+                    })
 				}
 			},
 			handleDelete(row) {
 				let index = this.todos.findIndex(item => item.id === row.id)
 				console.log(index);
 				this.todos.splice(index, 1);
+				ElMessage.warning({
+                    message:'删除成功!',
+                    showClose: true
+				})
 
 			},
             handleEdit(index) {
@@ -119,13 +130,19 @@
             editTodo(){
                 this.currentTodo.title = this.edit;
                 this.todos[this.index] = this.currentTodo;
-                ElMessage.success('修改成功！');
                 this.show = false;
+                ElMessage.success({
+                    message:'修改成功!',
+                    showClose: true
+                })
+
             }
 		}
 	}
 </script>
 
 <style scoped>
-
+ .textAlign{
+     text-align: center;
+ }
 </style>

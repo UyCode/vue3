@@ -1,33 +1,33 @@
-// 1.step one: define component
-//import {Router, createRouter} from 'vue-router';
-import {createRouter, createWebHistory} from "vue-router";
-import HelloWorld from "../components/HelloWorld";
+import {createRouter, createWebHashHistory} from 'vue-router'
+import Home from '../views/Home.vue'
 
 const routes = [
-    {
-        path: '/',
-        name: 'Home',
-        component: HelloWorld
-    },
-    {
-        path: '/about',
-        name: 'About',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ '../views/Todo')
-    },
-    {
-        path: '/calendar',
-        name: "Calendar",
-        component: () => import('../components/Calendar')
-    }
+	{
+		path: '/',
+		name: 'Home',
+		component: Home
+	},
+	{
+		path: '/todo',
+		name: 'todo',
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: () => import(/* webpackChunkName: "about" */ '../views/Todo.vue')
+	},
+	{
+		path: '/calendar',
+		name: 'Calendar',
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: () => import(/* webpackChunkName: "about" */ '../components/Calendar.vue')
+	}
 ]
 
 const router = createRouter({
-    'history': createWebHistory(process.env.BASE_URL),
-    base: process.env.BASE_URL,
-    routes
+	history: createWebHashHistory(),
+	routes
 })
 
 export default router

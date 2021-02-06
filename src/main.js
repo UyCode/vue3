@@ -6,7 +6,7 @@ import 'element-plus/lib/theme-chalk/index.css';
 import App from './App.vue'
 import './plugins/axios'
 
-createApp(App)
+createApp(App).use(store).use(router)
     .use(store)
     .use(router)
     .use(ElementPlus)
@@ -16,11 +16,6 @@ createApp(App)
 /*const app = createApp(App)
 app.use(ElementPlus, VueAxios, axios, router)
 app.mount('#app')*/
-
-//createApp(App).use(Axios).mount('#app')
-/* 
-const vm = app.mount('#app');
-console.log(vm, "created"); */
 
 /* console.log(vm.message);
 console.log(vm.count);

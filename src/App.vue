@@ -1,66 +1,25 @@
 <template>
-	<div id="nav">
-		<h1> Hello App</h1>
-		<router-link to="/">HomePage</router-link> |
-		<router-link to="/calendar">Calendar</router-link> |
-		<router-link to="/about">Todo</router-link>
-
-		<!--<router-example />-->
-	</div>
-	<router-view/>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/todo">Todo</router-link> |
+    <router-link to="/calendar">Calendar</router-link>
+  </div>
+  <router-view/>
 </template>
-
-<script>
-	export default {
-		components: {},
-		data() {
-			return {
-				message: "You loaded this page on" + new Date().toLocaleString(),
-				count: 12,
-				url: 'https://baidu.com',
-				myText: '',
-			};
-		},
-
-		created() {
-			console.log(this.message);
-
-		},
-
-		methods: {
-			doSomething() {
-				alert("focused")
-			},
-			starter() {
-				console.log('🟢 Start Sending')
-			},
-			endSending() {
-				console.log('⏱ sending Complete')
-			},
-			duration() {
-				console.log('⏳ sending data...')
-			}
-		}
-	};
-</script>
 
 <style>
 
-	.myclass {
-		color: red;
-	}
+#nav {
+  padding: 30px;
+  text-align: center;
+}
 
-	#nav {
-		padding: 30px;
-	}
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
 
-	#nav a {
-		font-weight: bold;
-		color: #2c3e50;
-	}
-
-	#nav a.router-link-exact-active {
-		color: #42b983;
-	}
-
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
