@@ -4,9 +4,8 @@
 		<article class="left">
 			<label>
 				<textarea class="content-right"
-				          :value="content"
-				          @input="update">
-
+					:value="content"
+					@input="update">
 				</textarea>
 			</label>
 		</article>

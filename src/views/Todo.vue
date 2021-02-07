@@ -9,20 +9,20 @@
                 ></el-input>
 
                 <el-button  :plain="true" @click="addNewTodo"
-                           type="primary">Add
+                           type="primary">添加
                 </el-button>
             </div>
             <div>
                 <el-table :data="todos"
                           style="width: 640px;">
                     <el-table-column
-                            label="To-Do List"
+                            label="To-Do 列表"
                             prop="title"
-                            width="180"
+                            width="460"
                             @remove="todos.splice(index, 1)"
                     >
                     </el-table-column>
-                    <el-table-column label="操作">
+                    <el-table-column label="操作" width="180">
                         <template #default="scope">
                             <el-button type="primary" icon="el-icon-edit"
                                        size="mini"

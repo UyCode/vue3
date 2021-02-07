@@ -1,7 +1,5 @@
 <template>
-	<div id="nav">
-
-	</div>
+	<div id="nav"></div>
 	<div class="nav-content">
 		<router-link class="nav-space nav-content"
 			v-for="(list, index) in navList"
@@ -44,25 +42,25 @@
 
 	.nav-content {
 		position: static;
-		width: 1910px;
+		width: 100%;
 		height: 80px;
-		margin-left: 50%;
 		text-align: center;
-		transform: translate3d(-50%, -50%, 0);
+		transform: translate3d(0, -50%, 0);
 		font-weight: bolder;
 		color: black;
+		filter: blur(0.02em);
 	}
 
-	#nav a {
-		font-weight: bold;
-		color: #2c3e50;
+	#nav, a {
+		font-weight: bolder;
 	}
 
-	#nav a.router-link-exact-active {
-		color: #42b983;
+	.router-link-exact-active {
+		color: #ea0505;
 	}
 
 	.nav-space {
 		margin-left: 15px;
 	}
+
 </style>
