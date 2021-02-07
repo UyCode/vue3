@@ -62,7 +62,8 @@
 		unmounted() {
 			this.debounce(() => this.$message({
 				message: '你刚刚失去了一切...',
-				type: 'warning'
+				type: 'warning',
+				showClose: true
 			}), 500);
 		}
 

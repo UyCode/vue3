@@ -1,8 +1,8 @@
 <template>
 	<div class="slider">
-		<div v-if="currentSlider === 0" class="one"></div>
-		<div v-if="currentSlider === 1" class="two"></div>
-		<div v-if="currentSlider === 2" class="three"></div>
+		<div v-if="currentSlider === 0" class="one" style=""></div>
+		<div v-else-if="currentSlider === 1" class="two"></div>
+		<div v-else class="three"></div>
 	</div>
 </template>
 
@@ -12,22 +12,29 @@
 		data() {
 			return {
 				currentSlider: 0,
-				task:''
+				task:'',
+				translateY: 0,
+				taskRotate:''
 			}
 		},
 		mounted() {
 			this.task = setInterval(() =>{
-				console.log('current slider: ', this.currentSlider);
+				this.taskRotate = 0;
 				if(this.currentSlider === 2){
 					this.currentSlider = 0;
 				}else{
 					this.currentSlider++;
 				}
 			}, 1000);
+
+			this.taskRotate = setInterval(() =>{
+				this.translateY++;
+			},1)
 		},
 
 		beforeUnmount() {
 			clearInterval(this.task);
+			clearInterval(this.taskRotate);
 		}
 	}
 </script>
