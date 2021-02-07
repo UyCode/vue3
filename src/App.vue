@@ -57,6 +57,7 @@
 
 	.router-link-exact-active {
 		color: #ea0505;
+		font-size: large;
 	}
 
 	.nav-space {

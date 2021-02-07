@@ -42,7 +42,11 @@
 				},
 		},
 		beforeUnmount() {
-			alert('你确定离开此页面?');
+
+			if(this.content !== ''){
+				alert('你确定离开此页面?');
+			}
+
 			/*this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
 				confirmButtonText: '确定',
 				cancelButtonText: '取消',
@@ -60,11 +64,14 @@
 			});*/
 		},
 		unmounted() {
-			this.debounce(() => this.$message({
-				message: '你刚刚失去了一切...',
-				type: 'warning',
-				showClose: true
-			}), 500);
+			if(this.content !== ''){
+				this.debounce(() => this.$message({
+					message: '你刚刚失去了一切...',
+					type: 'warning',
+					showClose: true
+				}), 500);
+			}
+
 		}
 
 	}
