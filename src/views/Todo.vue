@@ -14,6 +14,7 @@
         </div>
         <div>
             <el-table :data="todos"
+                      :row-class-name="rowClassName"
                       style="width: 730px; text-align: center">
                 <el-table-column
                         label="To-Do 列表"
@@ -36,8 +37,7 @@
                         <el-button icon="el-icon-circle-check"
                                    size="mini"
                                    type="warning"
-                                   :row-class-name="addClass()"
-                                   @click="complete(scope.row)">完成
+                                   @click="complete(scope.row, scope.$index)">完成
                         </el-button>
                     </template>
                 </el-table-column>
@@ -84,7 +84,8 @@
                 todos: [
                     {
                         id: 1,
-                        title: 'xxxxxxx'
+                        title: 'xxxxxxx',
+                        isComplete: false
                     }
                 ],
                 currentTodo: {}
@@ -139,27 +140,29 @@
                 });
             },
 
-            complete(row){
-                this.addClass(row.id);
+            complete(row, rowIndex){
+                this.todos[rowIndex].isComplete = true;
+                this.rowClassName(row);
 
             },
-            addClass(rowId){
-                if(rowId === 1){
-                    console.log(rowId);
+            rowClassName({row}){
+                if(row.isComplete){
                     return 'complete';
                 }
+                return '';
             }
 
         }
     }
 </script>
 
-<style scoped>
+<style>
     .textAlign {
         text-align: center;
     }
 
-    .complete{
-        color: #ea0505;
+    .el-table .complete{
+        color: gray;
+        text-decoration: line-through;
     }
 </style>
