@@ -63,7 +63,7 @@
 	.main{
 		width: 700px;
 		height: 350px;
-		-webkit-transform: translate(40%, 0);
+		-webkit-transform: translate(50%, 0);
 		background: #fa376c;
 	}
 
