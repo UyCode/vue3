@@ -23,6 +23,7 @@
 					{name: 'Calendar', to: '/calendar'},
 					{name: 'Markdown', to: '/markdown'},
 					{name: 'Slider', to: '/slider'},
+					{name: 'Login', to: '/login'},
 				]
 			}
 		}

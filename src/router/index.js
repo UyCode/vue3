@@ -10,18 +10,12 @@ const routes = [
 	{
 		path: '/todo',
 		name: 'todo',
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () => import(/* webpackChunkName: "about" */ '../views/Todo.vue')
+		component: () => import('../views/Todo.vue')
 	},
 	{
 		path: '/calendar',
 		name: 'Calendar',
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () => import(/* webpackChunkName: "about" */ '../components/Calendar.vue')
+		component: () => import('../components/Calendar.vue')
 	},
 	{
 		path: '/markdown',
@@ -32,6 +26,11 @@ const routes = [
 		path: '/slider',
 		name: 'Slider',
 		component: () => import('../views/Slider.vue')
+	},
+	{
+		path: '/login',
+		name: 'Login',
+		component: () => import('../views/Login.vue')
 	}
 ]
 
